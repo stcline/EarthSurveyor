@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+        <link rel="icon" type="image/png" href="Ges.png">
+        <title>EarthSurveyor Map</title>
+        <link rel="stylesheet" href="http://js.arcgis.com/3.13/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+        <link rel="stylesheet" type="text/css" href="EarthSurveyor.css">
+        <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+        <script src="http://js.arcgis.com/3.13/"></script>
+        <script src="EarthSurveyor.js"></script>
+</head>
+<body class="claro">
+  <div id="appTitleContainer">EarthSurveyor - World Mapping Lab</div> 
+  <div>    
+       <a id="appReturnLink"  href="index.html">Back to Main</a>
+  </div>
+  <div id="search"></div>
+  <!-- this is the measure tool   -->
+  <div style="position:absolute; z-Index:999;">
+    <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+      <div id="measurementDiv"></div>
+      <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+    </div>
+  </div>
+  <div id="content" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:true" style="width: 100%; height: 100%; margin: 0;">
+    <div id="rightPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
+      <div data-dojo-type="dijit/layout/AccordionContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" id="legendPane" data-dojo-props="title:'Legend', selected:true">
+          <div id="legendDiv"></div>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Layers'">
+          <span style="padding:10px 0;">Click to toggle the visibility of the layers</span>
+          <div id="toggle" style="padding: 2px 2px;"></div>
+        </div>
+      </div>
+    </div>
+    <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="overflow:hidden;">
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- credits
+
+Globe Icon: IconArchive http://www.iconarchive.com/show/blue-bits-icons-by-icojam/globe-icon.html
+
+-->
